@@ -30,3 +30,13 @@
     list-style-type: none
 
   }
+
+  .new-link {
+    text-decoration: underline;
+    color: black;
+  }
+
+  .new-link:hover {
+    font-style: italic;
+    font-weight: bold; 
+  }

@@ -7,14 +7,19 @@
                     Catalogue
                 </li>  
                 <br> 
+                <br>
                 <li class="li-titular">
 
-                    <%= link_to "View all", list_index_path %>
+                    <%= link_to "View all", list_index_path, class: "new-link" %>
+                    <br>
+                    <br>
 
                 </li>
                     <% @categories.each do |category| %>
                     <li id="<%= dom_id(category) %>">
                     <%= category.name %>
+                    <br>
+                    <br>
                 </li>
                 
                 <% end %>  

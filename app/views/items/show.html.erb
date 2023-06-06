@@ -3,8 +3,9 @@
 <%= render @item %>
 
 <div>
-  <%= link_to "Edit this item", edit_item_path(@item) %> |
+  <%= link_to "Edit", edit_item_path(@item), class: "btn btn-outline-dark btn-rectangular" %> |
   <%= link_to "Back to items", items_path, class: "btn btn-dark btn-rectangular"  %>
-
+  <br>
+  <br>
   <%= button_to "Delete", @item, method: :delete, class: "btn btn-rectangular btn-outline-danger" %>
 </div>
