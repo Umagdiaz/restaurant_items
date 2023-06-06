@@ -1,2 +1,21 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-4 ">
+            <lu>
+                <li class="li-titular">
+                    Catalogue
+                </li>   
+                    <% @categories.each do |category| %>
+                    <li id="<%= dom_id(category) %>">
+                    <%= category.name %>
+                </li>
+                <% end %>  
+            </lu> 
+        </div>
+
+        <div class="col-8 ">
+        <%= image_tag("restaurante.jpg", class: "img-fluid") %>
+        </div>
+
+    </div>
+</div>    
