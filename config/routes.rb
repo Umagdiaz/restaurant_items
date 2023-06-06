@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'list/index'
   
   resources :items
   resources :categories

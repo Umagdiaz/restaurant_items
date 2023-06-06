@@ -8,7 +8,9 @@
                 </li>  
                 <br> 
                 <li class="li-titular">
-                    view all
+
+                    <%= link_to "View all", list_index_path %>
+
                 </li>
                     <% @categories.each do |category| %>
                     <li id="<%= dom_id(category) %>">
