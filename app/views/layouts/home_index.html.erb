@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+   
+  <title>Restaurant-Items</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+    <body>
+
+    
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-4 ">
+                    <lu>
+                        <br>
+                        <li class="li-titular text-center">
+                            Catalogue
+                        </li>  
+                        <br>
+                        <li class="new-link text-center sub ">
+                            <%= link_to "View all", list_index_path %>  
+                        </li>
+                            <br>
+                            <% @categories.each do |category| %>
+                            <li id="<%= dom_id(category) %>", class="text-center li-thing" >
+                            <%= category.name %>
+                            
+                        </li>
+                        
+                        <% end %>  
+                    </lu> 
+                </div>
+                <div class="col-8 ">
+                    <%= image_tag("restaurante.jpg", class: "img-fluid") %>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>           

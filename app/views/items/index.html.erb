@@ -1,13 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Items</h1>
-
+<h2><strong>Items</strong></h2>
+<br>
 <div id="items">
   <% @items.each do |item| %>
     <%= render item %>
     <p>
       <%= link_to "Show this item", item, class: "btn btn-outline-dark btn-rectangular btn-sm" %>
     </p>
+    <hr>
   <% end %>
 </div>
 
