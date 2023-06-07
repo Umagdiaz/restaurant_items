@@ -3,23 +3,18 @@
         <div class="col-4 ">
             <lu>
                 <br>
-                <li class="li-titular">
+                <li class="li-titular text-center">
                     Catalogue
                 </li>  
-                <br> 
                 <br>
-                <li class="li-titular">
-
-                    <%= link_to "View all", list_index_path, class: "new-link" %>
-                    <br>
-                    <br>
-
+                <li class="new-link text-center sub ">
+                    <%= link_to "View all", list_index_path, class:"" %>  
                 </li>
+                    <br>
                     <% @categories.each do |category| %>
-                    <li id="<%= dom_id(category) %>">
+                    <li id="<%= dom_id(category) %>", class="text-center li-thing" >
                     <%= category.name %>
-                    <br>
-                    <br>
+                    
                 </li>
                 
                 <% end %>  
