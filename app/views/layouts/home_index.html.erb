@@ -19,8 +19,13 @@
     <%= javascript_importmap_tags %>
   </head>
     <body>
-
-    <%= render 'layouts/navbar' %>
+    <% if admin_signed_in? %>
+        <%= render 'layouts/navbar' %>
+    <% else %>  
+        <div>
+        <a class="enlace btn btn-outline-light btn-rectangular btn-sm" <%= link_to "owner", admin_session_path %></a>
+        </div> 
+    
         <div class="container-fluid container_img container_index">
             <div class="row no-gutters">
                     
@@ -47,8 +52,10 @@
                 </div>
                 <div class="col-8 ">
                     <%= image_tag("restaurante.jpg", class: "img-fluid") %>
-                </div>  
+                </div>
+             
             </div>
         </div> 
     </body>
+    <% end %>
 </html>           

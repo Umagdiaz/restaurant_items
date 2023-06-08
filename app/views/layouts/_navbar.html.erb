@@ -4,10 +4,6 @@
     <% if admin_signed_in? %>
 
       <li class="nav-item active ">
-        <a class="nav-link" <%= link_to "Home", root_path %></a>
-      </li>
-
-      <li class="nav-item active ">
         <a class="nav-link" <%= link_to "Categories", categories_path %></a>
       </li>
 
@@ -29,9 +25,7 @@
 </nav>
   <% else %>
 
-    <div>
-  <a class="enlace btn btn-outline-light btn-rectangular btn-sm" <%= link_to "owner", admin_session_path %></a>
-    </div> 
+    
 
   <% end %>
 
