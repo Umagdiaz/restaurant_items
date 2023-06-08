@@ -56,14 +56,23 @@
 
   .enlace {
     position: absolute;
-    bottom: 15px;
-    right: 10px;
+    bottom: 25px;
+    right: 25px;
     color: white;
     background-color: transparent;
     border: 1px solid white;
   }
 
   .enlace:hover {
-    font-style: italic;
-    
+    font-style: italic; 
   }
+
+  .container_img {
+    padding-right: 0;
+  }
+
+  .container-index {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+

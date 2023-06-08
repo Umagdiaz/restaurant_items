@@ -20,11 +20,12 @@
   </head>
     <body>
 
-        
-        <div class="container-fluid">
+    <%= render 'layouts/navbar' %>
+        <div class="container-fluid container_img container_index">
             <div class="row no-gutters">
-            <%= render 'layouts/navbar' %>
+                    
                 <div class="col-4 ">
+                
                 
                     <lu>
                         <br>
@@ -46,10 +47,8 @@
                 </div>
                 <div class="col-8 ">
                     <%= image_tag("restaurante.jpg", class: "img-fluid") %>
-                </div>
-                
+                </div>  
             </div>
-            
         </div> 
     </body>
 </html>           
