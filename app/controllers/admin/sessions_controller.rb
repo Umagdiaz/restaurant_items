@@ -1,4 +1,4 @@
-lass Admin::SessionsController < Devise::SessionsController
+class Admin::SessionsController < Devise::SessionsController
   before_action :check_credentials, only: [:create, :delete, :update]
 
   private

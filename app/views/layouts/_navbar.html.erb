@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ms-4">
+    <% if admin_signed_in? %>
+
+      <li class="nav-item active ">
+        <a class="nav-link" <%= link_to "Home", root_path %></a>
+      </li>
 
       <li class="nav-item active ">
         <a class="nav-link" <%= link_to "Categories", categories_path %></a>
@@ -18,10 +23,16 @@
   </div>
       <ul class="form-inline my-2 my-lg-0">
         <li class="nav-link me-4">
-          <button class="btn btn-outline-dark btn-rectangular btn-sm  ">Log out</button>
-        </li> 
+          <a class="btn btn-outline-dark btn-rectangular btn-sm" <%= link_to "Log out", destroy_admin_session_path, 'data-turbo-method': :delete %></a>
+        </li>
       </ul>
 </nav>
+
+<% else %>
+<div class="enlace">
+  <a class=" btn btn-outline-light btn-rectangular btn-sm "<%= link_to "owner", admin_session_path %></a>
+</div>
+<% end %>
 
 
    

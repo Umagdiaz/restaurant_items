@@ -53,3 +53,17 @@
     font-size: 2em;
     
   }
+
+  .enlace {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+
+  .enlace:hover {
+    font-style: italic;
+    
+  }

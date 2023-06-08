@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admins, :controllers: {
+  
+  devise_for :admins, controllers: {
     sessions: 'admin/sessions'
   }
+
   get 'list/index'
   
   resources :items

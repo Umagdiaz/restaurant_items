@@ -23,7 +23,7 @@
         
         <div class="container-fluid">
             <div class="row no-gutters">
-            <%= render 'layouts/secondnav' %>
+            <%= render 'layouts/navbar' %>
                 <div class="col-4 ">
                 
                     <lu>
@@ -38,8 +38,7 @@
                             <br>
                             <% @categories.each do |category| %>
                             <li id="<%= dom_id(category) %>", class="text-center li-thing" >
-                            <%= category.name %>
-                            
+                            <%= category.name %>  
                         </li>
                         
                         <% end %>  
@@ -48,7 +47,9 @@
                 <div class="col-8 ">
                     <%= image_tag("restaurante.jpg", class: "img-fluid") %>
                 </div>
+                
             </div>
+            
         </div> 
     </body>
 </html>           
