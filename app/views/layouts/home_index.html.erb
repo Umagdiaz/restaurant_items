@@ -36,14 +36,15 @@
                         <br>
                         <li class="li-titular text-center">
                             Catalogue
-                        </li>  
+                        </li> 
+                        <br> 
                         <br>
                         <li class="new-link text-center sub ">
                             <%= link_to "View all", list_index_path %>  
                         </li>
                             <br>
-                            <% @categories.each do |category| %>
-                            <li id="<%= dom_id(category) %>", class="text-center li-thing" >
+                            <%  @categories.each do |category| %>
+                        <li  class="li-thing text-center", id="<%= dom_id(category) %>" >
                             <%= link_to category.name, show_items_category_path(category.name) %>  
                         </li>
                         
