@@ -51,7 +51,7 @@
   .li-thing {
     list-style-type: none;
     font-size: 2em;
-    text-decoration: none !important;
+    
   }
 
   .li-thing:hover {
