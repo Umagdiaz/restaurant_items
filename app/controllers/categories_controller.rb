@@ -10,6 +10,11 @@ class CategoriesController < ApplicationController
   def show
   end
 
+  def show_items
+    @category = Category.find_by(name: params[:name])
+    @items = @category.items if @category
+  end
+
   # GET /categories/new
   def new
     @category = Category.new

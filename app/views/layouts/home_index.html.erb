@@ -44,7 +44,7 @@
                             <br>
                             <% @categories.each do |category| %>
                             <li id="<%= dom_id(category) %>", class="text-center li-thing" >
-                            <%= category.name %>  
+                            <%= link_to category.name, show_items_category_path(category.name) %>  
                         </li>
                         
                         <% end %>  

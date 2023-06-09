@@ -3,6 +3,11 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions'
   }
 
+  get 'list/index'
+  get 'categories/:name/show_items', to: 'categories#show_items', as: 'show_items_category'
+
+  
+
   authenticated :admin do
     root to: 'items#index', as: :authenticated_root
     resources :items
@@ -13,6 +18,6 @@ Rails.application.routes.draw do
     root to: 'home#index'
   end
 
-  get 'list/index'
+
 
 end
