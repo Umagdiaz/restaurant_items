@@ -11,4 +11,5 @@ class Admin::SessionsController < Devise::SessionsController
       redirect_to new_admin_session_path, alert: 'Credenciales inválidas'
     end
   end
-end
+end  
+
