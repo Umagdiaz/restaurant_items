@@ -4,10 +4,14 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions'
   }
 
+  authenticate :admin do
+    
+    resources :items
+    resources :categories
+    
+  end
+
   get 'list/index'
-  
-  resources :items
-  resources :categories
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
