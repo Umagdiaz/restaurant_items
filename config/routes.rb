@@ -1,20 +1,18 @@
 Rails.application.routes.draw do
-  
   devise_for :admins, controllers: {
     sessions: 'admin/sessions'
   }
 
-  authenticate :admin do
-    
+  authenticated :admin do
+    root to: 'items#index', as: :authenticated_root
     resources :items
     resources :categories
-    
+  end
+
+  unauthenticated do
+    root to: 'home#index'
   end
 
   get 'list/index'
-  root 'home#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
