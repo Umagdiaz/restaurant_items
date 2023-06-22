@@ -3,14 +3,17 @@ class Admin < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-        
-    def email
-      'restaurant@gmail.com'
+
+  validates :email, uniqueness: true
+  validate :one_admin
+
+  private
+       
+  def one_admin
+    if Admin.exists?
+      errors.add(:base, "Only can be one Admin.")
     end
-        
-    def password
-     '123456'
-    end
+  end       
 end
         
 
