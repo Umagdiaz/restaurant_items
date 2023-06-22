@@ -4,28 +4,25 @@
     <% if admin_signed_in? %>
 
       <li class="nav-item">
-        <a class="nav-link" <%= link_to "Items", items_path %></a>
+        <%= link_to "Items", items_path, class: "nav-link" %>
       </li>
 
       <li class="nav-item active ">
-        <a class="nav-link" <%= link_to "Categories", categories_path %></a>
+        <%= link_to "Categories", categories_path, class: "nav-link" %>
       </li>
 
       <li>
-        <a class="nav-link" <%= link_to "List", list_index_path %></a>
+        <%= link_to "List", list_index_path, class:"nav-link" %>
       </li>
     </ul>
 
   </div>
       <ul class="form-inline my-2 my-lg-0">
         <li class="nav-link me-4">
-          <a class="btn btn-outline-dark btn-rectangular btn-sm" <%= link_to "Log out", destroy_admin_session_path, 'data-turbo-method': :delete %></a>
+          <%= link_to "Log out", destroy_admin_session_path, 'data-turbo-method': :delete, class: "btn btn-outline-dark btn-rectangular btn-sm" %>
         </li>
       </ul>
-</nav>
-  <% else %>
-
-    
+</nav> 
   <% end %>
 
 

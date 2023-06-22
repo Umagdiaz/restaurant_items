@@ -23,7 +23,7 @@
         <%= render 'layouts/navbar' %>
     <% else %>  
         <div>
-        <a class="enlace btn btn-outline-light btn-rectangular btn-sm" <%= link_to "owner", admin_session_path %></a>
+            <%= link_to "owner", admin_session_path, class: "enlace btn btn-outline-light btn-rectangular btn-sm" %>
         </div> 
     
         <div class="container-fluid container_img container_index">
