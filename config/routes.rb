@@ -18,6 +18,6 @@ Rails.application.routes.draw do
     root to: 'home#index'
   end
 
-
+  get '*path', to: 'errors#routing_error'
 
 end
