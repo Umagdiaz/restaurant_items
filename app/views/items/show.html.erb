@@ -7,7 +7,7 @@
       <%= link_to "Back", items_path, class: "btn btn-dark btn-rectangular" %> |
       <%= link_to "Edit", edit_item_path(@item), class: "btn btn-outline-dark btn-rectangular" %> 
   </div>
-  <div class="col-md-8 d-flex justify-content-end">
+  <div class="col-md-8 d-flex flex-column justify-content-end align-items-end">
       <%= button_to "Delete", @item, method: :delete, class: "btn btn-rectangular btn-outline-danger btn-sm" %>
   </div>
 </div>

@@ -7,7 +7,7 @@ With this app as an administrator you can create a single account as (Admin) pro
 The user, without the need to register, can see all the products (items), either by category or together, and thus know which products are offered and their description.
 
 ## Test
-Differents test with Rspec and Capybara. Controller, features and requests tests.
+Differents test with Rspec and Capybara, controller test, features test and requests tests.
 
 ## Img
 | ![Home](app/assets/stylesheets/home_view.jpg) | ![Index Admin](app/assets/stylesheets/index_view.jpg) |
