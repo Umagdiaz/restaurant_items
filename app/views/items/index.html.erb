@@ -1,15 +1,19 @@
 <p style="color: green"><%= notice %></p>
-
 <h2><strong>Items</strong></h2>
+<%= link_to "New item", new_item_path, class: "new-link" %>
 <br>
-<div id="items">
-  <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item, class: "btn btn-outline-dark btn-rectangular btn-sm" %>
-    </p>
-    <hr>
-  <% end %>
+<hr>
+<div id="items" class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      <div class="col-4">
+        <%= render item %>
+        <p>
+          <%= link_to "Show this item", item, class: "btn btn-outline-dark btn-rectangular btn-sm" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New item", new_item_path, class: "new-link" %>
+
