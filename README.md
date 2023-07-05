@@ -10,10 +10,10 @@ The user, without the need to register, can see all the products (items), either
 Differents test with Rspec and Capybara, controller test, features test and requests tests.
 
 ## Img
-| ![Home](app/assets/stylesheets/home_view.jpg) | ![Index Admin](app/assets/stylesheets/add_item.png) |
+| ![Home](app/assets/stylesheets/index_page.png) | ![Index Admin](app/assets/stylesheets/add_item.png) |
 |:---:|:---:|
 | Home | Add new |
-![Home](app/assets/stylesheets/add_item.png) | ![Index Admin](app/assets/stylesheets/categories_view.png) |
+![Home](app/assets/stylesheets/items_view.png) | ![Index Admin](app/assets/stylesheets/categories_view.png) |
 |:---:|:---:|
 | Item | Categories|
 
